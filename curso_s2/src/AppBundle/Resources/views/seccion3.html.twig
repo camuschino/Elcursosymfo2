@@ -1,0 +1,15 @@
+{% extends ('::layout.html.twig') %}
+
+     {% block banner %} 
+
+            <p>Banner para la seccion 3</p>
+     {% endblock %}
+
+
+    {% block contenido %}
+    	
+    	{{ render(controller('AppBundle:Default:usuarios')) }}
+       <h2>Seccion 3</h2>
+       <p>Aca vamos a ir mostrando el contenido de la sección 3</p>
+       <p><a class="btn btn-default" href="#" role="button">Ver Detalles &raquo;</a></p>
+    {% endblock %}

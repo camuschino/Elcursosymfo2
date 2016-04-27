@@ -1,0 +1,14 @@
+{% extends ('::layout.html.twig') %}
+
+     {% block banner %} 
+
+            <p>Banner para la seccion 1</p>
+     {% endblock %}
+
+
+    {% block contenido %}
+    	{{ parent() }}
+       <h2>Seccion 1</h2>
+       <p>Aca vamos a ir mostrando el contenido de la sección 1</p>
+       <p><a class="btn btn-default" href="#" role="button">Ver Detalles &raquo;</a></p>
+    {% endblock %}

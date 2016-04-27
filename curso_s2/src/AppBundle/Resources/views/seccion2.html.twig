@@ -1,0 +1,15 @@
+{% extends ('::layout.html.twig') %}
+
+     {% block banner %} 
+
+            <p>Banner para la seccion 2</p>
+     {% endblock %}
+
+
+    {% block contenido %}
+    	
+    	{{ include('AppBundle::tabla.html.twig') }}
+       <h2>Seccion 2</h2>
+       <p>Aca vamos a ir mostrando el contenido de la sección 2</p>
+       <p><a class="btn btn-default" href="#" role="button">Ver Detalles &raquo;</a></p>
+    {% endblock %}

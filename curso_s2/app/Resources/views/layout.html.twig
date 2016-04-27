@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% block titulo %} 
+
+         <title>Practica TWIG</title>
+      {% endblock %} 
+      <!-- Bootstrap core CSS -->
+      <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+   </head>
+
+   <body>
+      <div class="jumbotron">
+         <div class="container">
+            <h1>Bienvenidos!</h1>
+     {% block banner %} 
+
+            <p>Este es mi primer template twig</p>
+     {% endblock %}
+            <div class="row">
+        <div class="col-md-3">
+                  <p><a class="btn btn-success" href="{{ path('home') }}" role="button">Home</a></p>
+               </div>
+               <div class="col-md-3">
+                  <p><a class="btn btn-success" href="{{ path('seccion1') }}" role="button">Seccion 1</a></p>
+               </div>
+               <div class="col-md-3">
+                  <p><a class="btn btn-warning" href="{{ path('seccion2') }}" role="button">Seccion 2</a></p>
+               </div>
+               <div class="col-md-3">
+                  <p><a class="btn btn-info" href="{{ path('seccion3') }}" role="button">Seccion 3</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <!-- Example row of columns -->
+         <div class="row">
+            <div class="col-md-12">
+        {% block contenido %}
+               <h2>Contenido</h2>
+               <p>Aca vamos a ir mostrando el contenido de las diferentes páginas</p>
+               <p><a class="btn btn-default" href="#" role="button">Ver Detalles &raquo;</a></p>
+        {% endblock %}
+            </div>
+         </div>
+         <hr>
+         <footer>
+            <p>Curso Symfony2 2016</p>
+         </footer>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+   </body>
+</html>
